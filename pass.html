@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="pass.css">
     <script src="pass.js"></script>
 </head>
-<body onload="makePass()">
+<body>
     <h1 style="color: white;">Password Generator</h1>
     <div class="container">
         <div class="frame">
@@ -17,40 +17,36 @@
             <label for="" id="settings">password Length</label>
             <br>
             <div class="range">
-                <input type="range" name="" id="range" min="8" max="15"  value="10">
-                <p style="color: white;" id="length">0</p>
+                <input type="range" value="8" id="range" min="8" max="15" onchange="getValue()">
+                <p style="color: white;" id="length">8</p>
             </div>
             <br>
             <label for="" id="settings">password settings</label>
             
             <div class="settings">
                 <div>
-                    <input type="checkbox" name="" id="">
-                    <label for="">lowercase</label>
+                    <input type="checkbox" name="" id="lower" onchange="change()">
+                    <label for="">Uppercase</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="" id="">
-                    <label for="">lowercase</label>
+                    <input type="checkbox" name="" id="upper" onchange="change()">
+                    <label for="">Lowercase</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="" id="">
-                    <label for="">lowercase</label>
+                    <input type="checkbox" name="" id="number" onchange="change()">
+                    <label for="">Numbers</label>
                 </div>
+
                 <div>
-                    <input type="checkbox" name="" id="">
-                    <label for="">lowercase</label>
+                    <input type="checkbox" checked="true" id="all" onchange="allChanges()">
+                    <label for="">All</label>
                 </div>
-                <div>
-                    <input type="checkbox" name="" id="">
-                    <label for="">lowercase</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="" id="">
-                    <label for="">lowercase</label>
-                </div>
-            
 
 
+
+            </div>
+            <div class="button">
+                <button onclick="makePass()">Generate</button>
             </div>
         </div>
     </div>
